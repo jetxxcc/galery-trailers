@@ -1,2 +1,2 @@
 # galery-trailers
-Un pequeño apartado con una galeria de imagenes extraidas de una base de datos.
+Un pequeño apartado, galeria de trailer extraidas de una base de datos.
