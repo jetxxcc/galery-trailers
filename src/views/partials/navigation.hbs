@@ -1,9 +1,51 @@
- <nav>
-        <h2>Trailer-Youtube</h2>
 
-        <ul>
-            <li><a href="../user/login.hbs">login</a></li>
-            <li><a href="../user/register.hbs">singup</a></li>
-            <li><a href="">config</a></li>
-        </ul>
-    </nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark p-2 bg-black">
+  <div class="container">
+    <a class="navbar-brand" href="/">Trailer-Youtube</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <ul class="navbar-nav ms-auto">
+        {{!-- {{#if user}} --}}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/config"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Config
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/config">All Trailers</a>
+              <a class="dropdown-item" href="/config/add">Add A Trailer</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="">Logout</a>
+            </ul>
+          </li>
+        {{!-- {{else}} --}}
+          <li class="nav-item">
+            <a class="nav-link" href="/user/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/user/singup">Register</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        {{!-- {{/if}} --}}
+      </ul>
+    </div>
+  </div>
+</nav>

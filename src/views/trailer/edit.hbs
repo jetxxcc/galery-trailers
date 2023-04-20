@@ -1,17 +1,50 @@
-<h1>edite</h1>
 
-<form action="/config/edit/{{tra._id}}?_method=PUT" method="POST">
+<div class="container m-3">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Edit Trailer</h1>
 
-    <input type="hidden" name="_method" value="PUT">
+              <form action="/config/edit/{{tra._id}}?_method=PUT" method="POST" enctype="multipart/form-data"> 
 
-  <input name="title" value="{{tra.title}}" type="text" placeholder="titulo" />
-  <input name="date" value="{{tra.date}}" type="text" placeholder="date"/>
-  <input name="director" value="{{tra.director}}" type="text" placeholder="director"/>
-  <input name="actor" value="{{tra.actor}}" type="text" placeholder="actor"/>
-  <textarea name="description" placeholder="reseña">{{tra.description}}</textarea>
-  
-  <input name="link" value="{{tra.link}}" type="text" placeholder="link" />
-  <input name="image" value="{{tra.originalname}}" type="file" >
-  <button>save</button>
+              <input type="hidden" name="_method" value="PUT">
 
-</form>
+                <div class="mb-3">
+                    <input class="form-control" name="title" value="{{tra.title}}" type="text" placeholder="titulo" />
+                </div>
+                
+                <div class="mb-3">
+                    <input class="form-control" name="date" value="{{tra.date}}" type="text" placeholder="date"/>
+                </div>
+                
+                <div class="mb-3">
+                  <input class="form-control" name="director" value="{{tra.director}}" type="text" placeholder="director"/>
+                </div>
+                
+                <div class="mb-3">
+                  <input class="form-control" name="actor" value="{{tra.actor}}" type="text" placeholder="actor"/>
+                </div>
+                
+                <div class="mb-3">
+                  <textarea class="form-control" name="description" placeholder="reseña">{{tra.description}}</textarea>
+                </div>
+
+                <div class="mb-3">
+                  <input class="form-control" name="link" value="{{tra.link}}" type="text" placeholder="link" />
+                </div>
+
+                <div class="mb-3">
+                  <input class="form-control" name="image" value="{{tra.originalname}}" type="file" >
+                </div>
+
+                <button class="btn btn-primary">save</button>
+              </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

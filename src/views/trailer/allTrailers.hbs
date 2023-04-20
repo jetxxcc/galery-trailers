@@ -1,7 +1,7 @@
-<h1>all trailer</h1>
+<h1 class="m-3">All Trailer</h1>
 
 
-<table> 
+<table class="table table-bordered table-hover table-dark"> 
   <thead>
     <tr>
       <th>N.</th>
@@ -28,7 +28,7 @@
         <td>{{description}}</td>
         <td>
                 {{#if filename}}
-            <p>undone</p>
+            <p class="btn btn-dark">undone</p>
           {{else}}
             <p>done</p>
           {{/if}}
@@ -39,10 +39,10 @@
           
             <form action="/config/delete/{{_id}}?_method=DELETE" method="POST">
             <input type="hidden" name="_method" value="DELETE">
-                    <button>delete</button>
+                    <button  class="btn btn-danger">delete</button>
             </form>
           
-          <a href="edit/{{_id}}">update</a>
+          <a href="/config/edit/{{_id}}" class="btn btn-info">update</a>
         </td>
       </tr>
 

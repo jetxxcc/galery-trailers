@@ -1,11 +1,45 @@
-<form action="/config/new-tra" method="POST" enctype="multipart/form-data"> 
-  <input name="title" type="text" placeholder="titulo" />
-  <input name="date" type="text" placeholder="date"/>
-  <input name="director" type="text" placeholder="director"/>
-  <input name="actor" type="text" placeholder="actor"/>
-  <textarea name="description" placeholder="reseña"></textarea>
-  
-  <input name="link" type="text" placeholder="link" />
-  <input name="image" type="file" >
-  <button>save</button>
-</form>
+<div class="container m-3">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Add Trailer</h1>
+
+              <form action="/config/new-tra" method="POST" enctype="multipart/form-data"> 
+                <div class="mb-3">
+                    <input class="form-control" name="title" type="text" placeholder="titulo" />
+                </div>
+                
+                <div class="mb-3">
+                  <input class="form-control" name="date" type="text" placeholder="date"/>
+                </div>
+                
+                <div class="mb-3">
+                  <input class="form-control" name="director" type="text" placeholder="director"/>
+                </div>
+                
+                <div class="mb-3">
+                  <input class="form-control" name="actor" type="text" placeholder="actor"/>
+                </div>
+                
+                <div class="mb-3">
+                  <textarea class="form-control" name="description" placeholder="reseña"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <input class="form-control" name="link" type="text" placeholder="link" />
+                </div>
+
+                <div class="mb-3">
+                  <input class="form-control" name="image" type="file" >
+                </div>
+
+                <button class="btn btn-primary">save</button>
+              </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
