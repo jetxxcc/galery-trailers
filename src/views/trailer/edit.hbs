@@ -1,0 +1,17 @@
+<h1>edite</h1>
+
+<form action="/config/edit/{{tra._id}}?_method=PUT" method="POST">
+
+    <input type="hidden" name="_method" value="PUT">
+
+  <input name="title" value="{{tra.title}}" type="text" placeholder="titulo" />
+  <input name="date" value="{{tra.date}}" type="text" placeholder="date"/>
+  <input name="director" value="{{tra.director}}" type="text" placeholder="director"/>
+  <input name="actor" value="{{tra.actor}}" type="text" placeholder="actor"/>
+  <textarea name="description" placeholder="reseña">{{tra.description}}</textarea>
+  
+  <input name="link" value="{{tra.link}}" type="text" placeholder="link" />
+  <input name="image" value="{{tra.originalname}}" type="file" >
+  <button>save</button>
+
+</form>

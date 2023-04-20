@@ -1,0 +1,54 @@
+<h1>all trailer</h1>
+
+
+<table> 
+  <thead>
+    <tr>
+      <th>N.</th>
+      <th>titulo</th>
+      <th>fecha</th>
+      <th>director</th>
+      <th>actor</th>
+      <th>link</th>
+      <th>reseña</th>
+      <th>imagen</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tra}}
+
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{title}}</td>
+        <td>{{date}}</td>
+        <td>{{director}}</td>
+        <td>{{actor}}</td>
+        <td>{{link}}</td>
+        <td>{{description}}</td>
+        <td>
+                {{#if filename}}
+            <p>undone</p>
+          {{else}}
+            <p>done</p>
+          {{/if}}
+        </td>
+            
+
+        <td>
+          
+            <form action="/config/delete/{{_id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+                    <button>delete</button>
+            </form>
+          
+          <a href="edit/{{_id}}">update</a>
+        </td>
+      </tr>
+
+
+
+    {{/each}}
+  </tbody>
+</table>
+
